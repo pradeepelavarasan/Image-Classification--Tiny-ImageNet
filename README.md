@@ -3,8 +3,8 @@ Image Classification on Tiny ImageNet with Custom ML Model built based on RESNET
 
 Steps involved:
 
-## Importing Required Packages
+**Importing Required Packages
 
-## Loading data to Colab
+**Loading data to Colab
 
 ## 
