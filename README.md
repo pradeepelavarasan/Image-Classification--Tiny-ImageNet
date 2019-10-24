@@ -38,7 +38,7 @@ Below is the high levelstructure of the custom model:
 
 Below is the view of how the model is designs considering the Receptive field, image size and no. of parameters at each level.
 
-![Model_Design_Plan](/Model Design Plan.JPG)
+![Model_Design_Plan](/Model%20Design%20Plan.JPG)
 
 ### Data Generator Setup
 
