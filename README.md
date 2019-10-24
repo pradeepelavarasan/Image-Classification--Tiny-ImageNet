@@ -19,6 +19,7 @@ Above process if more efficient for using the images.
 Considerations for the model design:
 1) Size of the images
 2) Based on the size of images, we had to decide the Receptive field required. Since the images are very small in size, we are had to go beyong the receptive field of the object to cover the background also. So we target RF of about 128.
+3) Given the small size of data, carry forward the images to deeper layers in the network without reducing its size much.
 
 Below is the structure of the custom model:
 
