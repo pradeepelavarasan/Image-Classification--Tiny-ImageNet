@@ -4,7 +4,7 @@ Image Classification on Tiny ImageNet with Custom ML Model built based on RESNET
 ## Steps involved:
 
 ### Importing Required Packages
-Importing the required packages and also initializing the required process. This also has the initialization if TPU process to leverage to power of TPU in Google Colabs. 
+Importing the required packages and also initializing the required processes. This also has the initialization if TPU process to leverage to power of TPU in Google Colabs. 
 Note: There have been few updates after April 2019 (when this model was written) to the TPU execution. So kindly update to latest versio nof TPU execution code. 
 
 ### Loading data to Colab
@@ -12,9 +12,9 @@ Note: There have been few updates after April 2019 (when this model was written)
 2) Mounted the Google Drive to Google Colab
 3) Extracted the images to Google Colab
 
-Above process if more efficient for using the images. 
+Above process is more efficient for using the images. 
 
-### Functions required for building custom RESNET
+### Custom Model Design based on RESNET and DENSENET
 
 Considerations for the model design:
 1) Size of the images
@@ -36,11 +36,13 @@ Below is the high levelstructure of the custom model:
 - Global Average pooling
 - Softmax
 
-Below is the view of how the model is designs considering the Receptive field, image size and no. of parameters at each level.
+Below is the view of how the model is designs considering the Receptive field, image size and no. of parameters at each level. You can also refer to excel file (Model Design.xlsx) where this model was designed
 
 ![Model_Design_Plan](/Model%20Design%20Plan.JPG)
 
 ### Data Generator Setup
+
+
 
 ### Training Initializations
 
