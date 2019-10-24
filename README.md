@@ -21,7 +21,7 @@ Considerations for the model design:
 2) Based on the size of images, we had to decide the Receptive field required. Since the images are very small in size, we are had to go beyong the receptive field of the object to cover the background also. So we target RF of about 128.
 3) Given the small size of data, carry forward the images to deeper layers in the network without reducing its size much.
 
-Below is the structure of the custom model:
+Below is the high levelstructure of the custom model:
 
 - Initialization Block 0
 - Intersection/Bottleneck Block 0
@@ -35,6 +35,10 @@ Below is the structure of the custom model:
 - Intersection/Bottleneck Block 4
 - Global Average pooling
 - Softmax
+
+Below is the view of how the model is designs considering the Receptive field, image size and no. of parameters at each level.
+
+![Model Design Plan](/Model Design Plan.JPG)
 
 ### Data Generator Setup
 
