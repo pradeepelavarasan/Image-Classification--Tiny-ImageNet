@@ -68,15 +68,23 @@ You can load the parameters from the low resolution training and resume the trai
 
 Entire ML model is an iterative process and so it the data augmentation techniqueus. After training the model, you can analyse the misclassified iamges and come up with more sophisticated image augmentation techniques. Below was my new update based on imgaug library:
 
-Sequential([
+- Sequential([
 - Fliplr(0.5)
 - Multiply((0.5, 1.5), per_channel=0.5)
 - Affine(scale=(0.25, 2.0))
 - Sometimes(0.7,iaa.CoarseDropout(p=0.2, size_percent=0.02),iaa.Affine(rotate=(-45, 45)))
-], random_order=False)
+- ], random_order=False)
 
 ### Model Training on 64*64 images - with Additional Augmentations
+
+You can continue the model training based on the new augmentation techniques to improve your accurary. 
 
 ### Final Evaluation
 
 The best accuracy reached was 59.49% in epoch 198
+
+### Additional steps performed to analysize the mistakes but not covered in the code:
+- View the misclassified images to understand what the actual problems. You can refer to my another repository related to GRADCAM for this sample code.
+- Use GRADCAM to understand where is the model focusing in an image to take a decision. You can refer to my another repository related to GRADCAM for this sample code.
+- Analyse the classification matrix
+- Try altering the weights by giving more weights to the classes that have less accurary.
