@@ -22,8 +22,8 @@ Considerations for the model design:
 
 Below is the structure of the custom model:
 
-Initialization Block 0
-Intersection/Bottleneck Block 0
+- Initialization Block 0
+- Intersection/Bottleneck Block 0
 Resnet Block 1
 Intersection/Bottleneck Block 1
 Resnet Block 2
