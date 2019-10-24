@@ -4,10 +4,36 @@ Image Classification on Tiny ImageNet with Custom ML Model built based on RESNET
 ## Steps involved:
 
 ### Importing Required Packages
+Importing the required packages and also initializing the required process. This also has the initialization if TPU process to leverage to power of TPU in Google Colabs. 
+Note: There have been few updates after April 2019 (when this model was written) to the TPU execution. So kindly update to latest versio nof TPU execution code. 
 
 ### Loading data to Colab
+1) Saved the image dataset in Google Drive
+2) Mounted the Google Drive to Google Colab
+3) Extracted the images to Google Colab
+
+Above process if more efficient for using the images. 
 
 ### Functions required for building custom RESNET
+
+Considerations for the model design:
+1) Size of the images
+2) Based on the size of images, we had to decide the Receptive field required. Since the images are very small in size, we are had to go beyong the receptive field of the object to cover the background also. So we target RF of about 128.
+
+Below is the structure of the custom model:
+
+Initialization Block 0
+Intersection/Bottleneck Block 0
+Resnet Block 1
+Intersection/Bottleneck Block 1
+Resnet Block 2
+Intersection/Bottleneck Block 2
+Resnet Block 3
+Intersection/Bottleneck Block 3
+Resnet Block 4
+Intersection/Bottleneck Block 4
+Global Average pooling
+Softmax
 
 ### Data Generator Setup
 
@@ -23,4 +49,4 @@ Image Classification on Tiny ImageNet with Custom ML Model built based on RESNET
 
 ### Final Evaluation
 
-
+The best accuracy reached was 59.49% in epoch 198
