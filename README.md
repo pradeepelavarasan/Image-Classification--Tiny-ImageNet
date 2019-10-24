@@ -69,10 +69,10 @@ You can load the parameters from the low resolution training and resume the trai
 Entire ML model is an iterative process and so it the data augmentation techniqueus. After training the model, you can analyse the misclassified iamges and come up with more sophisticated image augmentation techniques. Below was my new update based on imgaug library:
 
 Sequential([
-Fliplr(0.5)
-Multiply((0.5, 1.5), per_channel=0.5)
-Affine(scale=(0.25, 2.0))
-Sometimes(0.7,iaa.CoarseDropout(p=0.2, size_percent=0.02),iaa.Affine(rotate=(-45, 45)))
+- Fliplr(0.5)
+- Multiply((0.5, 1.5), per_channel=0.5)
+- Affine(scale=(0.25, 2.0))
+- Sometimes(0.7,iaa.CoarseDropout(p=0.2, size_percent=0.02),iaa.Affine(rotate=(-45, 45)))
 ], random_order=False)
 
 ### Model Training on 64*64 images - with Additional Augmentations
