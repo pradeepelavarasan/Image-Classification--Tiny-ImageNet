@@ -53,12 +53,27 @@ Another advantage of this approach is the ability to do data augmentation as par
 The type of data augmentations required should be choosen based on analysing the actual images from the data set and also more importantly the misclasified images in the dataset. This will help us build the model not depending on just few indicators for a specific class. This is an iterative process and you can refine it after analysing the misclassified images. 
 
 ### Training Initializations
+- Setup the batch size required for training.
+- Setup the file structure for saving the checkpoint. Given the colabs cannot be run for more than 8 hours and also there is a risk of execution of model being stopped intermitently. It is always advisable to save the checkpoint after regular intervals (eg. fixed no. of epochs)
 
 ### Model Training on 32*32 Images
 
+Even tough the actual images set is of the size 64\*64 pixel, it is advisable to train the scalled down images first so that the model can learn some basic features faster and it will also save the overall training time. You can save the model parameters after running the model of lower resolution for few epochs and use it in the next phase (training on higher resolution)
+
 ### Model Training on 64*64 images
 
+You can load the parameters from the low resolution training and resume the training on high resolution images for more number of epochs. Remember to save your results regularly to avoid rework 
+
 ### Additional Data Augmentations
+
+Entire ML model is an iterative process and so it the data augmentation techniqueus. After training the model, you can analyse the misclassified iamges and come up with more sophisticated image augmentation techniques. Below was my new update based on imgaug library:
+
+Sequential([
+Fliplr(0.5)
+Multiply((0.5, 1.5), per_channel=0.5)
+Affine(scale=(0.25, 2.0))
+Sometimes(0.7,iaa.CoarseDropout(p=0.2, size_percent=0.02),iaa.Affine(rotate=(-45, 45)))
+], random_order=False)
 
 ### Model Training on 64*64 images - with Additional Augmentations
 
