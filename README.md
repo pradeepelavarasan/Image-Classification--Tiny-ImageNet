@@ -24,16 +24,16 @@ Below is the structure of the custom model:
 
 - Initialization Block 0
 - Intersection/Bottleneck Block 0
-Resnet Block 1
-Intersection/Bottleneck Block 1
-Resnet Block 2
-Intersection/Bottleneck Block 2
-Resnet Block 3
-Intersection/Bottleneck Block 3
-Resnet Block 4
-Intersection/Bottleneck Block 4
-Global Average pooling
-Softmax
+- Resnet Block 1
+- Intersection/Bottleneck Block 1
+- Resnet Block 2
+- Intersection/Bottleneck Block 2
+- Resnet Block 3
+- Intersection/Bottleneck Block 3
+- Resnet Block 4
+- Intersection/Bottleneck Block 4
+- Global Average pooling
+- Softmax
 
 ### Data Generator Setup
 
