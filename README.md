@@ -88,7 +88,7 @@ You can continue the model training based on the new augmentation techniques to 
 The best accuracy reached was 59.49% in epoch 198
 
 ### Additional steps performed to analysize the mistakes but not covered in the code:
-- View the misclassified images to understand the actual problems. You can refer to my other repository related to GRADCAM for this sample code.
-- Use GRADCAM to understand where is the model focusing on an image to make a decision. You can refer to my other repository (https://github.com/pradeepelavarasan/GRAD-CAM-Visual-Explanations) related to GRADCAM for this sample code.
+- View the misclassified images to understand the actual problems. You can refer to my other repository related to GRADCAM for this sample code. https://github.com/pradeepelavarasan/GRAD-CAM-Visual-Explanations
+- Use GRADCAM to understand where is the model focusing on an image to make a decision. You can refer to my other repository (https://github.com/pradeepelavarasan/GRAD-CAM-Visual-Explanations) for this code.
 - Analyze the classification matrix
 - Try altering the weights by giving more weights to the classes that have less accuracy.
